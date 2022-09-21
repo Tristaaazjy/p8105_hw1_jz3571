@@ -5,5 +5,16 @@ date: "2022-09-21"
 output: github_document
 ---
 
+#Problem 1 
+
+## download and load library dataset
+
+```{r}
+library(tidyverse)
+library(palmerpenguins)
+data("penguins", package = "palmerpenguins")
+```
+
+
 
 
