@@ -4,7 +4,12 @@ author: "Junyan Zhu"
 date: "2022-09-21"
 output: github_document
 ---
+```{r}
+library(tidyverse)
+library(palmerpenguins)
+```
 
 ```{r}
 data("penguins", package = "palmerpenguins")
 ```
+
