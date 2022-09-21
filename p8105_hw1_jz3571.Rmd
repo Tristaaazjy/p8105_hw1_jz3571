@@ -47,6 +47,8 @@ The mean of flppper length in mm is about 200.9.
 ### Make the scatterplot
 
 ```{r}
+ggplot(data = penguins, aes(x = bill_length_mm, y = flipper_length_mm, color = species)) + geom_point()
+
 ggp = ggplot(data = penguins, aes(x = bill_length_mm, y = flipper_length_mm, color = species)) + geom_point()
 ```
 
@@ -57,5 +59,16 @@ ggp = ggplot(data = penguins, aes(x = bill_length_mm, y = flipper_length_mm, col
 ggsave(filename = "scatterplot_of_penguins.pdf", plot = ggp)
 ```
 
+# Problem 2
 
+## Creat a data frame
+
+```{r}
+samp_df = tibble (
+  var_num = rnorm(10, mean = 0, sd = 1),
+  var_logic = var_num > 0,
+  var_vector = c("a","b","c",'d','e','f','g','h','i','j'),
+  var_factor = factor(c("1", "2", "3",'1','2','3','1','2','3','1'))
+)
+```
 
