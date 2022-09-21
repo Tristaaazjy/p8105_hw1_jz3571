@@ -42,5 +42,20 @@ mean(penguins$flipper_length_mm, na.rm = TRUE)
 
 The mean of flppper length in mm is about 200.9.
 
+## Scatterplot of flipper length and bill length
+
+### Make the scatterplot
+
+```{r}
+ggp = ggplot(data = penguins, aes(x = bill_length_mm, y = flipper_length_mm, color = species)) + geom_point()
+```
+
+### Save the scatterplot
+
+
+```{r}
+ggsave(filename = "scatterplot_of_penguins.pdf", plot = ggp)
+```
+
 
 
