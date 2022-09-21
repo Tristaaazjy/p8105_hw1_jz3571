@@ -90,7 +90,7 @@ We can get a mean from numerical and logcial variable respectively, but we canno
 ## Apply `as.numeric
 
 `
-```{r}
+```{r, results = "hide"}
 #mean of logical variable
 mean(as.numeric(samp_df$var_logic))
 #mean of character variable
