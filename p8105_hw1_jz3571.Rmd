@@ -75,24 +75,28 @@ samp_df = tibble (
 ## Mean of each variable
 
 ```{r}
+#mean of numeric variable
 mean(samp_df$var_num)
-```
-Mean of random sample which forms a standard distrubution is -0.13.
-
-```{r}
+#mean of logical variable
 mean(samp_df$var_logic)
-```
-
-Mean of the logical vector is 0.6
-
-```{r}
+#mean of character variable
 mean(samp_df$var_vector)
-```
-
-Warning: argument is not numeric or logical: returning NA
-
-```{r}
+#mean of factor variable
 mean(samp_df$var_factor)
 ```
 
-Warning: argument is not numeric or logical: returning NA
+We can get a mean from numerical and logcial variable respectively, but we cannot take means form character and factor variable
+
+## Apply `as.numeric
+
+`
+```{r}
+#mean of logical variable
+mean(as.numeric(samp_df$var_logic))
+#mean of character variable
+mean(as.numeric(samp_df$var_vector))
+#mean of factor variable
+mean(as.numeric(samp_df$var_factor))
+```
+
+Now we can get a mean from logical and factor variable, but still cannot from the character variable. This is because we can only get a mean from numerical values. In this case, the factor variable is converted to numerical variable based on its level, while for character variable such convertion is unable to made.
