@@ -72,3 +72,27 @@ samp_df = tibble (
 )
 ```
 
+## Mean of each variable
+
+```{r}
+mean(samp_df$var_num)
+```
+Mean of random sample which forms a standard distrubution is -0.13.
+
+```{r}
+mean(samp_df$var_logic)
+```
+
+Mean of the logical vector is 0.6
+
+```{r}
+mean(samp_df$var_vector)
+```
+
+Warning: argument is not numeric or logical: returning NA
+
+```{r}
+mean(samp_df$var_factor)
+```
+
+Warning: argument is not numeric or logical: returning NA
