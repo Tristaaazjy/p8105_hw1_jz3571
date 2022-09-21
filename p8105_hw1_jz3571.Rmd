@@ -9,7 +9,7 @@ output: github_document
 
 ## download and load library dataset
 
-```{r}
+```{r, message = FALSE}
 library(tidyverse)
 library(ggplot2)
 library(palmerpenguins)
@@ -24,7 +24,7 @@ summary(penguins)
 names(penguins)
 ```
 
-There are seven variables in total in the dataset of penguins. There are three species of penguins living in three islands. The bill length, bill depth, flipper length, body mass, sex and year are recorded.
+There are 8 variables in total in the dataset of penguins describing species, islands, bill length in mm, bill depth in mm, flipper length in mm, body mass in g, sex and year.
 
 ### Size of dataset
 ```{r}
@@ -40,7 +40,7 @@ There are 344 rows and 8 columes in the dataset
 mean(penguins$flipper_length_mm, na.rm = TRUE)
 ```
 
-The mean of flppper length in mm is about 200.9.
+After dropping the two missing data, the mean of flppper length in mm is about 200.9.
 
 ## Scatterplot of flipper length and bill length
 
