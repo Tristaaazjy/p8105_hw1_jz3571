@@ -11,7 +11,6 @@ output: github_document
 
 ```{r, message = FALSE}
 library(tidyverse)
-library(ggplot2)
 library(palmerpenguins)
 data("penguins", package = "palmerpenguins")
 ```
@@ -24,7 +23,7 @@ summary(penguins)
 names(penguins)
 ```
 
-There are 8 variables in total in the dataset of penguins describing species, islands, bill length in mm, bill depth in mm, flipper length in mm, body mass in g, sex and year.
+There are 8 variables in total in the dataset of penguins describing species, islands, including `r names(penguins)`.
 
 ### Size of dataset
 ```{r}
@@ -32,7 +31,7 @@ nrow(penguins)
 ncol(penguins)
 ```
 
-There are 344 rows and 8 columes in the dataset
+There are `r nrow(penguins)` rows and `r ncol(penguins)` columes in the dataset.
 
 ### Mean of flipper length
 
@@ -40,7 +39,7 @@ There are 344 rows and 8 columes in the dataset
 mean(penguins$flipper_length_mm, na.rm = TRUE)
 ```
 
-After dropping the two missing data, the mean of flppper length in mm is about 200.9.
+After dropping the two missing data, the mean of flppper length in mm is about `r mean(penguins$flipper_length_mm, na.rm = TRUE)`.
 
 ## Scatterplot of flipper length and bill length
 
@@ -85,7 +84,7 @@ mean(samp_df$var_vector)
 mean(samp_df$var_factor)
 ```
 
-We can get a mean from numerical and logcial variable respectively, but we cannot take means form character and factor variable
+We can get a mean from numerical and logcial variable respectively, but we cannot take means form character and factor variable.
 
 ## Apply `as.numeric
 
